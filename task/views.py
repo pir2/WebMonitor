@@ -11,7 +11,7 @@ def ping():
 
 # 定时器
 scheduler = BackgroundScheduler()
-scheduler.configure(timezone='Asia/Shanghai')
+scheduler.configure(timezone='America/Toronto')
 scheduler.add_jobstore(DjangoJobStore(), 'default')
 scheduler.add_job(func=ping,
                   trigger='interval',

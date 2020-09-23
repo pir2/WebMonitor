@@ -29,8 +29,10 @@ def get_content(url,
                 debug=False):
     if is_chrome == 0:
         selector_handler = new_handler('request', debug)
-    else:
+    elif is_chrome == 1:
         selector_handler = new_handler('phantomjs', debug)
+    else:
+        selector_handler = new_handler('firefox', debug)
 
     if selector_type == 0:
         content = selector_handler.get_by_xpath(url, selector, headers)

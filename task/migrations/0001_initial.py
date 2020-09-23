@@ -45,7 +45,7 @@ class Migration(migrations.Migration):
                 ('url', models.CharField(max_length=500, verbose_name='监控网址')),
                 ('selector_type', models.IntegerField(choices=[(0, 'Xpath'), (1, 'Css selector'), (2, 'JsonPath')], default='Xpath', verbose_name='元素选择器类型')),
                 ('selector', models.CharField(max_length=128, verbose_name='元素选择器')),
-                ('is_chrome', models.IntegerField(choices=[(0, 'no'), (1, 'yes')], default='no', verbose_name='是否使用无头浏览器')),
+                ('is_chrome', models.IntegerField(choices=[(0, 'no'), (1, 'yes'), (2, 'firefox')], default='no', verbose_name='是否使用无头浏览器')),
                 ('frequency', models.IntegerField(default=5, verbose_name='频率(分钟)  ')),
                 ('create_time', models.DateTimeField(auto_now_add=True, verbose_name='创建时间')),
                 ('regular_expression', models.CharField(blank=True, help_text='使用正则表达式进一步提取信息，可以留空', max_length=128, verbose_name='正则表达式')),

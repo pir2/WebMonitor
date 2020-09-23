@@ -118,7 +118,7 @@ class Task(models.Model):
     selector = models.CharField(max_length=500,
                                 verbose_name='元素选择器',
                                 null=False)
-    is_chrome_choices = ((0, 'no'), (1, 'yes'))
+    is_chrome_choices = ((0, 'requests'), (1, 'phantomjs'),(2,'firefox'))
 
     is_chrome = models.IntegerField(null=False,
                                     default='no',
